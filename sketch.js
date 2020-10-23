@@ -1,23 +1,47 @@
-let x, y;
-let dy = 0;
+let x0, y0;
+let dy0 = 0;
 
-// Code in this function is run once, when the sketch is started.
+let x1, y1;
+let dy1 = 0
+
+let ball0;
+let ball1;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  x = random(width);
-  y = 0;
+  ball0 = {
+    x: random(width),
+    y: random(height),
+    dy: 0
+  }
+  // x0 = random(width);
+  // x1 = random(width);
+  // y0 = random(0,5);
+  // y1 = random(0,300);
+
+  ball1 = {
+    x: random(width),
+    y: random(height),
+    dy: 0
+  }
 }
 
-// Code in this function is run once per frame. If it draws the same thing each
-// time, the sketch is a static image. If it draws something different on
-// different frames, the sketch is an animation.
+
 function draw() {
   background(200);
-  y += dy;
-  dy += 0.3;
-  circle(x,y,30);
+  ball0.y += ball0.dy;
+  ball0.dy += 0.3;
+  circle(ball0.x,ball0.y,30);
 
-  if (y >= height) {
-    dy = -0.95 * dy;
+  ball1.y += ball1.dy;
+  ball1.dy += 0.3;
+  circle(ball1.x,ball1.y,30);
+
+  if (ball0.y >= height) {
+    ball0.dy = -0.95 * ball0.dy;
+  }
+
+  if (ball1.y >= height) {
+    ball1.dy = -0.95 * ball1.dy;
   }
 }
