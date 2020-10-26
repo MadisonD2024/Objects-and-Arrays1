@@ -53,20 +53,20 @@ for (let i = 0; i < balls.length; i++) {
   //   balls.dy = -0.95 * balls.dy; }
 
   if (ball0.x >= width) {
-    ball0.dy = -0.95 * ball0.dy
+    ball0.dy = -0.96 * ball0.dy
   }
 
   if (ball1.x >= width) {
-    ball1.dy = -0.95 * ball1.dy 
+    ball1.dy = -0.96 * ball1.dy
   }
 
-    // if (ball0.x < 0) {
-    //   ball0.dy = 0.95 * ball0.dy
-    // }
+    if (ball0.x <= 0) {
+      ball0.dy = 0.96 * ball0.dy
+    }
   
-    // if (ball1.x < 0) {
-    //   ball0.dy = 0.95 * ball0.dy
-    // }
+    if (ball1.x <= 0) {
+      ball1.dy = 0.96 * ball1.dy
+    }
 
     // if (ball0.x >= width) {
     //   ball0.dy = 0.95 * ball0.dy
