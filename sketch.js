@@ -82,4 +82,13 @@ for (let i = 0; i < balls.length; i++) {
     // if (ball1.x >= width) {
     //   ball1.dy = 0.95 * ball1.dy;
   } 
+  function mousePressed() {
+    if (mouseIsPressed) {
+      colorMode(RGB);
+      a = random(225);
+      b = random(225);
+      c = random(225);
+      fill(a,b,c);
+    }
+  }
 // }
